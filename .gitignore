@@ -1,0 +1,68 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+.vite/
+
+# Environment files and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Local databases and SQLite sidecar files
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Private application data and backups
+local_data/
+private_data/
+backups/
+logs/
+*.log
+
+# CSV files: allow only approved synthetic test data
+*.csv
+!demo_data/**/*.csv
+!backend/tests/fixtures/**/*.csv
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Additional package-manager debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Additional frontend and local files
+dist-ssr/
+*.local
+
+# Additional editor and project files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

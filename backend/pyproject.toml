@@ -1,0 +1,21 @@
+# BudgetScope backend dependencies
+# Target runtime: Python 3.13
+
+[dependency-groups]
+runtime = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "sqlalchemy",
+    "alembic",
+    "sqlcipher3",
+    "python-multipart",
+]
+
+test = [
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
