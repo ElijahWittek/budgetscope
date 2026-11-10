@@ -1,6 +1,6 @@
 # BudgetScope
 
-**Status:** Development environment configured. Application implementation has not started.
+**Status:** Early implementation. The minimal FastAPI backend and its first automated smoke test are implemented and verified.
 
 BudgetScope is a local-first personal finance and budgeting application developed as a software engineering portfolio project.
 
@@ -17,6 +17,7 @@ The initial development environment and project structure have been prepared.
 - React, TypeScript, and Vite frontend configuration
 - React Router and frontend testing dependencies
 - Successful frontend linting, production builds, and testing-environment smoke test
+- Minimal FastAPI application with a passing automated smoke test
 
 **Not yet implemented:**
 - Application business logic and API endpoints
@@ -54,7 +55,50 @@ Available frontend checks:
 - `npm run lint --prefix frontend`
 - `npm run build --prefix frontend`
 
-Application startup instructions will be added when the corresponding functionality is implemented.
+### Run the backend
+
+From the repository root, open Git Bash:
+
+```bash
+cd backend
+source .venv/Scripts/activate
+python -m uvicorn budgetscope.main:app --host 127.0.0.1 --port 8000
+```
+
+The API documentation is available at:
+
+- http://127.0.0.1:8000/docs
+- http://127.0.0.1:8000/openapi.json
+
+The backend currently contains no financial API endpoints.
+
+### Run the frontend
+
+In a separate Git Bash terminal, from the repository root:
+
+```bash
+cd frontend
+npm run dev -- --host 127.0.0.1
+```
+
+Open the local URL displayed by Vite.
+
+The frontend currently displays a placeholder. Backend communication is not yet implemented.
+
+### Run checks
+
+Backend tests, from `backend/` with the virtual environment activated:
+
+```bash
+python -m pytest -q
+```
+
+Frontend linting and production build, from `frontend/`:
+
+```bash
+npm run lint
+npm run build
+```
 
 ## Data Privacy
 
