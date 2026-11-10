@@ -1,5 +1,6 @@
-from budgetscope.main import app
 from fastapi.testclient import TestClient
+
+from budgetscope.main import app
 
 
 def test_app_exposes_openapi_schema() -> None:

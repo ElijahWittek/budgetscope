@@ -17,5 +17,7 @@ test = [
     "httpx",
 ]
 
+lint = ["ruff"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
